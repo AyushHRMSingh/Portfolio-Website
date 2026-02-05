@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.SINGH // NETRUNNER_TERMINAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Fullscreen Boot Animation -->
+    <div id="boot-animation" class="boot-overlay">
+        <div class="boot-terminal">
+            <div class="boot-header">
+                <span class="boot-title">NETRUNNER_SYSTEM_v2.077</span>
+                <span class="boot-time" id="boot-time">00:00:00</span>
+            </div>
+            <div class="boot-content" id="boot-content">
+                <div class="boot-line">
+                    <span class="boot-prompt">&gt;</span>
+                    <span class="boot-text" data-text="LOADING_QUALIFICATIONS..."></span>
+                </div>
+                <div class="boot-line">
+                    <span class="boot-prompt">&gt;</span>
+                    <span class="boot-text" data-text="LOADING_SKILLS_DATABASE..."></span>
+                </div>
+                <div class="boot-line boot-success">
+                    <span class="boot-prompt">&gt;</span>
+                    <span class="boot-text" data-text="DECRYPTING_PROJECTS..."></span>
+                </div>
+            </div>
+            <div class="boot-progress">
+                <div class="boot-progress-bar" id="boot-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scanline Effect -->
+    <div class="scanline"></div>
+    <div class="chromatic-aberration"></div>
+
+    <!-- Left Terminal Navigation -->
+    <nav class="terminal-nav">
+        <div class="terminal-header">
+            <div class="terminal-title">NETRUNNER_OS</div>
+            <div class="terminal-version">v2.077</div>
+        </div>
+
+        <div class="terminal-user">
+            <span class="prompt">&gt;</span>
+            <span class="user-name">A.SINGH</span>
+            <div class="status-bar">
+                <span class="status-online"></span>
+                <span class="status-text">ONLINE</span>
+            </div>
+        </div>
+
+        <div class="terminal-menu">
+            <div class="menu-item active" data-target="boot">
+                <span class="menu-icon">█</span>
+                <span class="menu-text">BOOT_SEQUENCE</span>
+                <span class="menu-arrow">&gt;&gt;</span>
+            </div>
+            <div class="menu-item" data-target="profile">
+                <span class="menu-icon">█</span>
+                <span class="menu-text">PROFILE_DATA</span>
+                <span class="menu-arrow">&gt;&gt;</span>
+            </div>
+            <div class="menu-item" data-target="projects">
+                <span class="menu-icon">█</span>
+                <span class="menu-text">PROJECT_FILES</span>
+                <span class="menu-arrow">&gt;&gt;</span>
+            </div>
+            <div class="menu-item" data-target="contact">
+                <span class="menu-icon">█</span>
+                <span class="menu-text">CONNECT_NET</span>
+                <span class="menu-arrow">&gt;&gt;</span>
+            </div>
+        </div>
+
+        <div class="terminal-footer">
+            <div class="system-time" id="system-time">00:00:00</div>
+            <div class="system-info">
+                <div class="info-line">CPU: 100%</div>
+                <div class="info-line">RAM: 16GB</div>
+                <div class="info-line">NET: CONNECTED</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="content-area">
+
+        <!-- Boot Sequence Screen -->
+        <section class="screen active" id="boot">
+            <div class="screen-overlay"></div>
+            <div class="diagonal-split">
+                <div class="split-left">
+                    <div class="glitch-container">
+                        <h1 class="main-title glitch" data-text="AYUSH SINGH">AYUSH SINGH</h1>
+                    </div>
+                    <div class="subtitle-container">
+                        <span class="bracket-red">[</span>
+                        <span class="role-text">SOFTWARE_DEVELOPER</span>
+                        <span class="bracket-red">]</span>
+                    </div>
+
+                    <div class="boot-stats">
+                        <div class="stat-line">
+                            <span class="stat-key">LOCATION:</span>
+                            <span class="stat-val">PUNE/MUMBAI_INDIA</span>
+                        </div>
+                        <div class="stat-line">
+                            <span class="stat-key">STATUS:</span>
+                            <span class="stat-val highlight-cyan">AVAILABLE_FOR_HIRE</span>
+                        </div>
+                        <div class="stat-line">
+                            <span class="stat-key">EDUCATION:</span>
+                            <span class="stat-val">AMITY_UNIVERSITY</span>
+                        </div>
+                        <div class="stat-line">
+                            <span class="stat-key">COMPANY:</span>
+                            <span class="stat-val">DARKSTAR_CREATIVE</span>
+                        </div>
+                    </div>
+
+                    <div class="action-row">
+                        <button class="cyber-button primary" data-nav="profile">
+                            <span class="btn-glitch"></span>
+                            ACCESS_PROFILE
+                        </button>
+                        <a href="mailto:ayushhrmsingh@gmail.com" class="cyber-button secondary">
+                            <span class="btn-glitch"></span>
+                            SEND_MESSAGE
+                        </a>
+                        <button class="cyber-button secondary"
+                            onclick="window.parent.postMessage('switchToGeneric', '*')" style="margin-top: 1rem;">
+                            <span class="btn-glitch"></span>
+                            RETURN_TO_CORPO
+                        </button>
+                    </div>
+                </div>
+
+                <div class="split-right">
+                    <div class="hologram-frame">
+                        <div class="frame-corner tl"></div>
+                        <div class="frame-corner tr"></div>
+                        <div class="frame-corner bl"></div>
+                        <div class="frame-corner br"></div>
+                        <div class="scan-effect"></div>
+                        <img src="static/pfp.jpg" alt="Ayush Singh" class="hologram-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Screen -->
+        <section class="screen" id="profile">
+            <div class="screen-overlay"></div>
+            <div class="profile-layout">
+
+                <!-- Left: Profile Card -->
+                <div class="profile-card-container">
+                    <div class="card-glitch-border"></div>
+                    <div class="profile-header">
+                        <span class="header-bracket">&lt;</span>
+                        DOSSIER
+                        <span class="header-bracket">&gt;</span>
+                    </div>
+
+                    <div class="avatar-container">
+                        <div class="avatar-hexagon">
+                            <img src="static/pfp.jpg" alt="Ayush Singh" class="avatar-img">
+                            <div class="avatar-scan"></div>
+                        </div>
+                        <div class="avatar-corners">
+                            <span class="corner tl"></span>
+                            <span class="corner tr"></span>
+                            <span class="corner bl"></span>
+                            <span class="corner br"></span>
+                        </div>
+                    </div>
+
+                    <div class="dossier-data">
+                        <div class="data-entry">
+                            <span class="data-key">ID:</span>
+                            <span class="data-value">A.SINGH_2077</span>
+                        </div>
+                        <div class="data-entry">
+                            <span class="data-key">CLASS:</span>
+                            <span class="data-value highlight-cyan">NETRUNNER</span>
+                        </div>
+                        <div class="data-entry">
+                            <span class="data-key">LEVEL:</span>
+                            <span class="data-value">FRESH_GRADUATE</span>
+                        </div>
+                        <div class="data-entry">
+                            <span class="data-key">FACTION:</span>
+                            <span class="data-value">DARKSTAR</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-section">
+                        <div class="skills-header">&gt; TECH_SKILLS</div>
+                        <div class="skill-chips">
+                            <span class="chip">PYTHON</span>
+                            <span class="chip">JAVASCRIPT</span>
+                            <span class="chip">C++</span>
+                            <span class="chip">REACT</span>
+                            <span class="chip">FLASK</span>
+                            <span class="chip">NODE.JS</span>
+                            <span class="chip">MYSQL</span>
+                            <span class="chip">MONGODB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Bio Terminal -->
+                <div class="bio-terminal">
+                    <div class="terminal-top-bar">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot cyan"></span>
+                        <span class="terminal-title-text">BIO_TERMINAL.exe</span>
+                    </div>
+
+                    <div class="terminal-content">
+                        <div class="terminal-line">
+                            <span class="prompt-symbol">&gt;</span>
+                            <span class="text">Fresh Graduate from Amity University Mumbai with a Bachelors in Computer
+                                Application.</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt-symbol">&gt;</span>
+                            <span class="text">Currently working as a Software Developer at <span
+                                    class="highlight-cyan">DarkStar Creative Garage</span>, building innovative
+                                solutions.</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt-symbol">&gt;</span>
+                            <span class="text">Previously interned at <span class="highlight-cyan">Videoschool
+                                    Media</span> as a Software Developer Intern.</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt-symbol">&gt;</span>
+                            <span class="text">I like making cool things with code and like to challenge myself to learn
+                                and use new technologies.</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt-symbol">&gt;</span>
+                            <span class="text">Proficient in Python, JavaScript and C++ with experience in frameworks
+                                like React, Flask.</span>
+                        </div>
+
+                        <div class="terminal-line cursor-line">
+                            <span class="prompt-symbol">&gt;</span>
+                            <span class="cursor-blink">_</span>
+                        </div>
+                    </div>
+
+                    <!-- Contact Grid -->
+                    <div class="contact-grid">
+                        <a href="mailto:ayushhrmsingh@gmail.com" class="contact-chip">
+                            <img src="static/mail.svg" alt="Email" class="chip-icon">
+                            <span>EMAIL</span>
+                        </a>
+                        <a href="https://github.com/Heckrexter" target="_blank" class="contact-chip">
+                            <img src="static/github.svg" alt="GitHub" class="chip-icon">
+                            <span>GITHUB</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ayush-hrm-singh/" target="_blank" class="contact-chip">
+                            <img src="static/linkedin.png" alt="LinkedIn" class="chip-icon">
+                            <span>LINKEDIN</span>
+                        </a>
+                        <a href="static/Ayush_Singh_CV.pdf" class="contact-chip">
+                            <span class="cv-text">CV</span>
+                            <span>RESUME</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Screen -->
+        <section class="screen" id="projects">
+            <div class="screen-overlay"></div>
+            <div class="projects-header">
+                <h2 class="section-heading">
+                    <span class="heading-slash">//</span>
+                    PROJECT_ARCHIVE
+                </h2>
+                <div class="archive-line"></div>
+            </div>
+
+            <div class="projects-matrix">
+                <!-- Project 1 - Discord LLama Bot -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">001</div>
+                    <img src="static/discord-project.png" alt="Discord" class="tile-icon">
+                    <h3 class="tile-title">DISCORD LLAMA BOT</h3>
+                    <div class="tile-tags">
+                        <span>C++</span><span>AI</span><span>DISCORD</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/Discord-LLama-Cpp" target="_blank" class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 2 - Spotify Artist Info -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">002</div>
+                    <img src="static/spotify.png" alt="Spotify" class="tile-icon">
+                    <h3 class="tile-title">SPOTIFY ARTIST INFO</h3>
+                    <div class="tile-tags">
+                        <span>JAVASCRIPT</span><span>API</span><span>WEB</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/Spotify-Artist-Info" target="_blank" class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 3 - LLama Server -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">003</div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                        alt="Node.js" class="tile-icon">
+                    <h3 class="tile-title">LLAMA AI SERVER</h3>
+                    <div class="tile-tags">
+                        <span>NODE.JS</span><span>EXPRESS</span><span>AI</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/LLama-Server" target="_blank" class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 4 - Mac Backup Script -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">004</div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Shell"
+                        class="tile-icon">
+                    <h3 class="tile-title">MAC BACKUP V2</h3>
+                    <div class="tile-tags">
+                        <span>SHELL</span><span>AUTOMATION</span><span>MACOS</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/Mac-backup-script-v2" target="_blank" class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 5 - Visa Slot Checker -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">005</div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python" class="tile-icon">
+                    <h3 class="tile-title">VISA SLOT CHECKER</h3>
+                    <div class="tile-tags">
+                        <span>PYTHON</span><span>AUTOMATION</span><span>WEB</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/Visa-Slot-Checker" target="_blank" class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 6 - Temp Mail CLI -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">006</div>
+                    <svg class="tile-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z"
+                            stroke="#00F0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <h3 class="tile-title">TEMP MAIL CLI</h3>
+                    <div class="tile-tags">
+                        <span>SHELL</span><span>CLI</span><span>UTILITY</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/Temp-Mail-CLI" target="_blank" class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 7 - Fuel Pricer AM4 -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">007</div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python" class="tile-icon">
+                    <h3 class="tile-title">FUEL PRICER AM4</h3>
+                    <div class="tile-tags">
+                        <span>PYTHON</span><span>AUTOMATION</span><span>CRON</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/Fuel-Pricer-Am4-cron-version" target="_blank"
+                        class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 8 - Gemini CLI Coder -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">008</div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+                        alt="Google" class="tile-icon">
+                    <h3 class="tile-title">GEMINI CLI CODER</h3>
+                    <div class="tile-tags">
+                        <span>AI</span><span>CLI</span><span>TERMINAL</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/gemini-cli-coder" target="_blank" class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 9 - SiteSculpture Fork -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">009</div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                        alt="TypeScript" class="tile-icon">
+                    <h3 class="tile-title">SITESCULPTURE</h3>
+                    <div class="tile-tags">
+                        <span>TYPESCRIPT</span><span>WEB</span><span>FORK</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/SiteSculpture-fork-local-change" target="_blank"
+                        class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 10 - Plagiarism Checker -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">010</div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python" class="tile-icon">
+                    <h3 class="tile-title">PLAGIARISM CHECKER</h3>
+                    <div class="tile-tags">
+                        <span>PYTHON</span><span>NLP</span><span>ANALYSIS</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/Plagarism-checker" target="_blank" class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 11 - Video School PMS -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">011</div>
+                    <img src="static/Videoschool.png" alt="VideoSchool" class="tile-icon">
+                    <h3 class="tile-title">VIDEO SCHOOL PMS</h3>
+                    <div class="tile-tags">
+                        <span>PYTHON</span><span>FLASK</span><span>CMS</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/Video-School-PMS" target="_blank" class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 12 - YouTube Analytics -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">012</div>
+                    <img src="static/youtube.png" alt="YouTube" class="tile-icon">
+                    <h3 class="tile-title">YOUTUBE ANALYTICS</h3>
+                    <div class="tile-tags">
+                        <span>PYTHON</span><span>API</span><span>ANALYTICS</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/Youtube-Analytics-API-Use" target="_blank"
+                        class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 13 - QR Code Generator -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">013</div>
+                    <img src="static/qrcode.png" alt="QR Code" class="tile-icon">
+                    <h3 class="tile-title">QR CODE GENERATOR</h3>
+                    <div class="tile-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/QR-Code-Generator" target="_blank" class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 14 - Java MarketApp -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">014</div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+                        class="tile-icon">
+                    <h3 class="tile-title">JAVA MARKETAPP</h3>
+                    <div class="tile-tags">
+                        <span>JAVA</span><span>JAKARTA</span><span>MYSQL</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/Java-Webapp-MarketApp" target="_blank" class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+
+                <!-- Project 15 - LLama Web -->
+                <div class="project-tile">
+                    <div class="tile-corner"></div>
+                    <div class="tile-id">015</div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                        alt="TypeScript" class="tile-icon">
+                    <h3 class="tile-title">LLAMA WEB UI</h3>
+                    <div class="tile-tags">
+                        <span>TYPESCRIPT</span><span>REACT</span><span>AI</span>
+                    </div>
+                    <a href="https://github.com/AyushHRMSingh/LLama-Web" target="_blank" class="tile-link">
+                        VIEW &gt;&gt;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Screen -->
+        <section class="screen" id="contact">
+            <div class="screen-overlay"></div>
+            <div class="contact-layout">
+                <div class="contact-main">
+                    <h2 class="contact-title glitch" data-text="ESTABLISH CONNECTION">ESTABLISH CONNECTION</h2>
+                    <p class="contact-subtitle">// TRANSMIT_YOUR_MESSAGE</p>
+
+                    <div class="contact-options">
+                        <a href="mailto:ayushhrmsingh@gmail.com" class="contact-option">
+                            <div class="option-icon">
+                                <img src="static/mail.svg" alt="Email">
+                            </div>
+                            <div class="option-text">
+                                <div class="option-label">EMAIL</div>
+                                <div class="option-value">ayushhrmsingh@gmail.com</div>
+                            </div>
+                            <div class="option-arrow">&gt;&gt;</div>
+                        </a>
+
+                        <a href="https://github.com/Heckrexter" target="_blank" class="contact-option">
+                            <div class="option-icon">
+                                <img src="static/github.svg" alt="GitHub">
+                            </div>
+                            <div class="option-text">
+                                <div class="option-label">GITHUB</div>
+                                <div class="option-value">@Heckrexter</div>
+                            </div>
+                            <div class="option-arrow">&gt;&gt;</div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/ayush-hrm-singh/" target="_blank" class="contact-option">
+                            <div class="option-icon">
+                                <img src="static/linkedin.png" alt="LinkedIn">
+                            </div>
+                            <div class="option-text">
+                                <div class="option-label">LINKEDIN</div>
+                                <div class="option-value">Ayush Singh</div>
+                            </div>
+                            <div class="option-arrow">&gt;&gt;</div>
+                        </a>
+
+                        <a href="static/Ayush_Singh_CV.pdf" class="contact-option">
+                            <div class="option-icon cv-icon-large">CV</div>
+                            <div class="option-text">
+                                <div class="option-label">RESUME</div>
+                                <div class="option-value">Download PDF</div>
+                            </div>
+                            <div class="option-arrow">&gt;&gt;</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer
+        style="position: fixed; bottom: 0; left: 0; right: 0; padding: 0.5rem; text-align: center; background: linear-gradient(90deg, rgba(255, 0, 60, 0.1) 0%, rgba(0, 0, 0, 0.95) 50%, rgba(255, 0, 60, 0.1) 100%); border-top: 1px solid var(--cp-red); font-family: 'Rajdhani', sans-serif; font-size: 0.75rem; color: rgba(0, 240, 255, 0.6); letter-spacing: 2px; z-index: 999;">
+        VIBECODED WITH DISDAIN
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
