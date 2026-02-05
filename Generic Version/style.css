@@ -9,7 +9,7 @@
     --primary-dark: #1e40af;
     --text-dark: #1f2937;
     --text-light: #6b7280;
-    --bg-light: #f9fafb;
+    --bg-light: #e9ecef;
     --border: #e5e7eb;
 }
 
@@ -17,6 +17,19 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
+}
+
+/* Hide scrollbar globally but keep functionality */
+* {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+*::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
 }
 
 .container {
@@ -115,9 +128,10 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Sections */
 .section {
-    padding: 5rem 0;
+    padding: 8rem 0;
+    position: relative;
+    background: white;
 }
 
 .bg-light {
@@ -136,6 +150,7 @@ body {
     color: var(--text-light);
     max-width: 800px;
     margin: 0 auto 2rem;
+    text-align: center;
 }
 
 .about-container {
@@ -163,11 +178,12 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.section {
-    padding: 8rem 0;
-    position: relative;
-    background: white;
+.about-content p {
+    text-align: left;
+    margin: 0;
 }
+
+/* Sections moved up */
 
 /* Skills Grid */
 .skills-grid {
@@ -276,11 +292,24 @@ body {
 }
 
 /* Contact */
+#contact {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 1.5rem;
+}
+
+#contact p {
+    margin-bottom: 2rem;
+}
+
 .contact-links {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .contact-button {
@@ -363,6 +392,10 @@ footer {
     .skills-grid,
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    #contact {
+        padding: 3rem 0;
     }
 
     .contact-links {

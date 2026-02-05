@@ -96,7 +96,8 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #000000;
+    background: #000;
+    color: var(--cp-cyan);
     z-index: 10000;
     display: flex;
     align-items: center;
@@ -463,7 +464,7 @@ body {
 .content-area {
     flex: 1;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: scroll;
     position: relative;
     background: linear-gradient(135deg, rgba(255, 0, 60, 0.03) 0%, rgba(0, 0, 0, 0.95) 50%, rgba(0, 240, 255, 0.03) 100%);
 }
@@ -1731,4 +1732,17 @@ body {
     .project-tile:active {
         transform: translateY(-2px);
     }
+}
+
+/* Hide scrollbar globally but keep functionality */
+* {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+*::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
 }

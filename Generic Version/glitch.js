@@ -62,8 +62,16 @@ function handleClickOutside(e) {
 }
 
 function triggerGlitchSwitch() {
-    // Remove listeners before switching
+    const sidebar = document.getElementById('secretSidebar');
+    const button = document.getElementById('secretButton');
+
+    // Remove listeners
     document.removeEventListener('click', handleClickOutside);
     document.removeEventListener('touchstart', handleClickOutside);
+
+    // Reset UI state for return
+    button.style.right = '-300px';
+    sidebar.style.display = 'flex';
+
     window.parent.postMessage('switchToCool', '*');
 }
